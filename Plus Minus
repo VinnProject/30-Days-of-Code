@@ -1,0 +1,30 @@
+#!/bin/python3
+
+import sys
+
+from decimal import *
+
+def plusMinus(arr):
+    pos = 0
+    neg = 0
+    zeros = 0
+    for nums in arr:
+        if (nums > 0):
+            pos = pos + 1
+        if nums < 0:
+            neg = neg + 1
+        if nums == 0:
+            zeros = zeros + 1
+    fracPos = Decimal(pos) / Decimal(n)
+    preciseFracPos = format(fracPos, ".6f")
+    fracNeg = Decimal(neg) / Decimal(n)
+    preciseFracNeg = format(fracNeg, ".6f")
+    fracZeros = Decimal(zeros) / Decimal(n)
+    preciseFracZeros = format(fracZeros, ".6f")
+    print(preciseFracPos)
+    print(preciseFracNeg)
+    print(preciseFracZeros)
+
+n = int(input().strip())
+arr = list(map(int, input().strip().split(' ')))
+plusMinus(arr)

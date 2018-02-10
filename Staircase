@@ -1,0 +1,14 @@
+#!/bin/python3
+
+import sys
+
+def stairCase(numStairs):
+    n = numStairs - 2
+    for stairs in range(1, numStairs):
+        print(" " * n, "#" * stairs)
+        n -= 1
+    print("#" * numStairs)
+
+if __name__ == "__main__":
+    n = int(input().strip())
+    stairCase(n)

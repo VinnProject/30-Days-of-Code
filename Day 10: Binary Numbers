@@ -1,0 +1,21 @@
+#!/bin/python3
+
+import sys
+
+number = int(input())
+
+answer = 0
+maximum = 0
+
+while number > 0:
+    if number % 2 == 1:
+        answer += 1
+        if answer > maximum:
+            maximum = answer
+
+    else:
+        answer = 0
+
+    number //= 2
+
+print(maximum)
